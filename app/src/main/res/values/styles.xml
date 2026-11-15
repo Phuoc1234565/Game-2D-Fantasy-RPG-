@@ -1,0 +1,57 @@
+<resources>
+    <!-- Các style tùy chỉnh cho nút bấm sảnh game RPG (MainMenuActivity) -->
+    <style name="RpgMenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textColor">#F8E9CF</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="RpgSmallButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@drawable/button_small</item>
+        <item name="android:textColor">#F5E4C8</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingEnd">7dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="WoodMenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:background">@drawable/btn_wood_selector</item>
+        <item name="android:stateListAnimator">@animator/btn_scale_animator</item>
+        <item name="android:textColor">@color/ivory_white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+</resources>

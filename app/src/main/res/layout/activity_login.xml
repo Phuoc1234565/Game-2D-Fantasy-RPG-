@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@color/night_purple">
+
+    <!-- Bối cảnh nền sảnh RPG (kéo sát mép không padding, không nền xanh phẳng) -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Lớp phủ tối nhẹ bảo đảm độ tương phản chữ -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/overlay_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CỘT TRÁI: Logo + Tiêu đề ISEKAI RPG + Dị Thế Giới (không oval xanh) -->
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sv_right"
+        app:layout_constraintWidth_percent="0.42">
+
+        <ImageView
+            android:id="@+id/iv_login_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="160dp"
+            android:maxHeight="80dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tv_login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textColor="@color/ancient_gold"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:shadowColor="#CC000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="8"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_login_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_subtitle"
+            android:textColor="@color/ivory_white"
+            android:textSize="14sp"
+            android:fontFamily="serif"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- CỘT PHẢI: Form khung gỗ tối bán trong suốt viền vàng (bọc trong ScrollView) -->
+    <ScrollView
+        android:id="@+id/sv_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingStart="12dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ll_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.58">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_form_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_panel_wood"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <!-- Tiêu đề form đổi theo chế độ (ĐĂNG NHẬP / ĐĂNG KÝ) -->
+                <TextView
+                    android:id="@+id/tv_form_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/login_mode_title"
+                    android:textColor="@color/ancient_gold"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:letterSpacing="0.06"
+                    android:shadowColor="#CC000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="6" />
+
+                <!-- Đường kẻ phân cách vàng cổ mờ -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#4DE8C170" />
+
+                <!-- Ô Tên đăng nhập -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input_dark"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_input_user"
+                        android:contentDescription="@null" />
+
+                    <EditText
+                        android:id="@+id/et_username"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/hint_username"
+                        android:textColorHint="@color/hint_warm_gray"
+                        android:textColor="@color/ivory_white"
+                        android:textSize="14sp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <!-- Ô Mật khẩu kèm nút Hiện/Ẩn mật khẩu -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input_dark"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="4dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_input_lock"
+                        android:contentDescription="@null" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/hint_password"
+                        android:textColorHint="@color/hint_warm_gray"
+                        android:textColor="@color/ivory_white"
+                        android:textSize="14sp"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true" />
+
+                    <ImageButton
+                        android:id="@+id/btn_toggle_password"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:padding="11dp"
+                        android:scaleType="centerInside"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_visibility_off"
+                        android:contentDescription="@string/desc_toggle_password" />
+                </LinearLayout>
+
+                <!-- Thông báo lỗi nhỏ màu đỏ -->
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/error_red"
+                    android:textSize="11sp"
+                    android:layout_marginTop="6dp"
+                    android:visibility="gone" />
+
+                <!-- Nút chính (Đăng nhập hoặc Đăng ký theo chế độ) kiểu nút gỗ -->
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_wood_selector"
+                    android:stateListAnimator="@animator/btn_scale_animator"
+                    android:text="@string/menu_login"
+                    android:textColor="@color/ivory_white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp" />
+
+                <!-- Liên kết chữ vàng chuyển đổi giữa Đăng nhập / Đăng ký -->
+                <TextView
+                    android:id="@+id/tv_switch_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minHeight="44dp"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="@string/switch_to_register"
+                    android:textColor="@color/ancient_gold"
+                    android:textSize="13sp"
+                    android:fontFamily="serif"
+                    android:layout_marginTop="2dp" />
+
+                <!-- Nút Quay lại sảnh chính MainMenu -->
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_wood_selector"
+                    android:stateListAnimator="@animator/btn_scale_animator"
+                    android:text="@string/btn_back"
+                    android:textColor="@color/ivory_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

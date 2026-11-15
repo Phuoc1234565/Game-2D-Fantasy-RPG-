@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+    <!-- Background Circle -->
+    <path
+        android:fillColor="@color/night_purple"
+        android:strokeColor="@color/ancient_gold"
+        android:strokeWidth="4"
+        android:pathData="M64,64m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0" />
+    <!-- Helmet / Visor / Swordsman Crest -->
+    <path
+        android:fillColor="@color/ancient_gold"
+        android:pathData="M64,28c-18,0 -28,14 -28,32 0,22 18,38 28,42 10,-4 28,-20 28,-42 0,-18 -10,-32 -28,-32zM64,68c-10,0 -16,-6 -16,-6s6,-4 16,-4 16,4 16,4 -6,6 -16,6z" />
+    <!-- Crossed Swords detail -->
+    <path
+        android:fillColor="@color/ivory_white"
+        android:pathData="M62,40h4v16h-4zM60,54h8v3h-8z" />
+</vector>

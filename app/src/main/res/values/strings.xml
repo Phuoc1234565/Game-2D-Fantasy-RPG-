@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">IsekaiRPG</string>
+
+    <!-- Splash -->
+    <string name="splash_loading">Đang tải... %d%%</string>
+    <string name="splash_title">ISEKAI RPG</string>
+
+    <!-- Login -->
+    <string name="login_title">ISEKAI RPG</string>
+    <string name="login_subtitle">Dị Thế Giới</string>
+    <string name="hint_username">Tên đăng nhập</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="btn_login">ĐĂNG NHẬP</string>
+    <string name="btn_register">ĐĂNG KÝ</string>
+    <string name="err_empty_fields">Vui lòng nhập đầy đủ thông tin</string>
+    <string name="err_username_short">Tên đăng nhập phải có ít nhất 3 ký tự</string>
+    <string name="err_password_short">Mật khẩu phải có ít nhất 4 ký tự</string>
+    <string name="err_username_exists">Tên đăng nhập đã tồn tại</string>
+    <string name="err_login_failed">Sai tài khoản hoặc mật khẩu</string>
+    <string name="msg_register_success">Đăng ký thành công! Hãy đăng nhập.</string>
+
+    <!-- Character Select -->
+    <string name="char_select_title">Chọn Nhân Vật</string>
+    <string name="hint_char_name">Nhập tên nhân vật</string>
+    <string name="job_warrior">Kiếm Sĩ</string>
+    <string name="job_mage">Pháp Sư</string>
+    <string name="warrior_stats">HP: 120 | ATK: 12</string>
+    <string name="mage_stats">HP: 80 | ATK: 18</string>
+    <string name="warrior_weapon">Vũ khí: Kiếm Gỗ</string>
+    <string name="mage_weapon">Vũ khí: Trượng Tập Sự</string>
+    <string name="warrior_desc">Chiến binh cận chiến\nmạnh mẽ và bền bỉ</string>
+    <string name="mage_desc">Pháp sư phép thuật\nsát thương cao</string>
+    <string name="btn_start">BẮT ĐẦU HÀNH TRÌNH</string>
+    <string name="err_no_name">Vui lòng nhập tên nhân vật</string>
+    <string name="err_no_job">Vui lòng chọn class nhân vật</string>
+    <string name="msg_char_created">Tạo nhân vật thành công!</string>
+
+    <!-- DB / Prefs -->
+    <string name="pref_name">isekai_prefs</string>
+    <string name="extra_user_id">USER_ID</string>
+
+    <!-- Main Menu Strings -->
+    <string name="menu_play_game">Chơi Game</string>
+    <string name="menu_login">Đăng Nhập</string>
+    <string name="menu_register">Đăng Ký</string>
+    <string name="menu_settings">Cài Đặt</string>
+    <string name="menu_save">Lưu Game</string>
+    <string name="menu_version_format">Phiên bản %s</string>
+    <string name="menu_sound_desc">Bật/tắt âm thanh</string>
+    <string name="menu_music_desc">Bật/tắt nhạc nền</string>
+    <string name="menu_fullscreen_desc">Bật/tắt toàn màn hình</string>
+    <string name="app_title_2lines">ISEKAI\nRPG</string>
+
+    <!-- Settings Dialog -->
+    <string name="dialog_settings_title">CÀI ĐẶT</string>
+    <string name="settings_sfx_label">Âm thanh hiệu ứng</string>
+    <string name="settings_bgm_label">Nhạc nền</string>
+    <string name="settings_fullscreen_label">Toàn màn hình</string>
+    <string name="btn_close">ĐÓNG</string>
+
+    <!-- Login / Register Screen Redesign -->
+    <string name="login_mode_title">ĐĂNG NHẬP</string>
+    <string name="register_mode_title">ĐĂNG KÝ</string>
+    <string name="switch_to_register">Chưa có tài khoản? Đăng ký</string>
+    <string name="switch_to_login">Đã có tài khoản? Đăng nhập</string>
+    <string name="btn_back">Quay lại</string>
+    <string name="desc_toggle_password">Hiện hoặc ẩn mật khẩu</string>
+
+    <!-- Character Select Redesign -->
+    <string name="char_select_screen_title">CHỨC NGHIỆP</string>
+    <string name="char_create_title">TẠO NHÂN VẬT</string>
+    <string name="char_name_title">TÊN NHÂN VẬT</string>
+    <string name="char_stats_title">CHỈ SỐ</string>
+    <string name="stat_hp">Máu</string>
+    <string name="stat_atk">Công</string>
+    <string name="stat_range">Tầm</string>
+    <string name="start_weapon_label">Khởi đầu: </string>
+    <string name="desc_dice">Chọn tên ngẫu nhiên</string>
+    <string name="range_near">Gần</string>
+    <string name="range_far">Xa</string>
+    <string name="err_name_length">Tên phải từ 2 đến 12 ký tự</string>
+    <string name="warrior_desc_1line">HP cao, ATK cân bằng</string>
+    <string name="mage_desc_1line">ATK cao, đánh tầm xa</string>
+
+    <string-array name="fantasy_names">
+        <item>Arthur</item>
+        <item>Elena</item>
+        <item>Kaelen</item>
+        <item>Lyra</item>
+        <item>Cedric</item>
+        <item>Zephyr</item>
+        <item>Rowan</item>
+        <item>Freya</item>
+        <item>Roland</item>
+        <item>Lunara</item>
+        <item>Valen</item>
+        <item>Astrid</item>
+        <item>Gareth</item>
+        <item>Elowen</item>
+        <item>Corin</item>
+        <item>Seraphina</item>
+        <item>Keith</item>
+        <item>Alistair</item>
+        <item>Morgana</item>
+        <item>Soren</item>
+    </string-array>
+</resources>

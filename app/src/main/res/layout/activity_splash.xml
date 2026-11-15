@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@color/night_purple">
+
+    <!-- Background image: Kéo sát mép không padding -->
+    <ImageView
+        android:id="@+id/iv_splash_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_bg_fallback"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Dark overlay: Kéo sát mép không padding -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overlay_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo / App icon: Đã bỏ hình oval xanh phía sau -->
+    <ImageView
+        android:id="@+id/iv_splash_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <!-- Title text -->
+    <TextView
+        android:id="@+id/tv_splash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_title"
+        android:textColor="@color/ancient_gold"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:shadowColor="@color/magic_blue"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="8"
+        android:letterSpacing="0.15"
+        app:layout_constraintTop_toBottomOf="@id/iv_splash_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Bottom interactive/loading container: Có id để tránh camera đục lỗ -->
+    <LinearLayout
+        android:id="@+id/ll_splash_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/ivory_white"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <ProgressBar
+            android:id="@+id/pb_splash"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/ancient_gold"
+            android:progressBackgroundTint="@color/progress_track" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fantasy palette -->
+    <color name="night_purple">#1B1035</color>
+    <color name="magic_blue">#3B6FD8</color>
+    <color name="ancient_gold">#E8C170</color>
+    <color name="ivory_white">#F5EBD0</color>
+    <color name="overlay_dark">#99000000</color>
+    <color name="overlay_semi">#CC1B1035</color>
+    <color name="card_bg">#CC1B1035</color>
+    <color name="card_selected">#993B6FD8</color>
+    <color name="btn_pressed">#B8E8C170</color>
+    <color name="error_red">#FF5252</color>
+    <color name="success_green">#66BB6A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="progress_track">#33E8C170</color>
+
+    <!-- Wood button & panel palette -->
+    <color name="wood_dark_start">#4A2C1A</color>
+    <color name="wood_dark_end">#2E1A0F</color>
+    <color name="wood_pressed_start">#6B3F25</color>
+    <color name="wood_pressed_end">#4A2C1A</color>
+    <color name="wood_gold_light">#FFF0A8</color>
+    <color name="wood_panel_bg">#E62B180E</color>
+    <color name="input_dark_bg">#D92A1A10</color>
+    <color name="input_dark_stroke">#99E8C170</color>
+    <color name="hint_warm_gray">#A89888</color>
+
+    <!-- Custom Switch colors -->
+    <color name="switch_track_off">#3B261A</color>
+    <color name="switch_track_off_stroke">#5D4030</color>
+    <color name="switch_thumb_off">#8A705B</color>
+</resources>

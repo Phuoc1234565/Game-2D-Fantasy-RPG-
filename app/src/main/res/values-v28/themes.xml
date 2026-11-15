@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IsekaiRPG fullscreen theme for API 28+ (hỗ trợ hiển thị tràn tai thỏ / display cutout) -->
+    <style name="Theme.IsekaiRPG.Fullscreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/night_purple</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>
